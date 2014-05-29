@@ -5,20 +5,24 @@ class NotesController < ApplicationController
   # GET /notes.json
   def index
     @notes = Note.all
+    super
   end
 
   # GET /notes/1
   # GET /notes/1.json
   def show
+    super
   end
 
   # GET /notes/new
   def new
     @note = Note.new
+    super
   end
 
   # GET /notes/1/edit
   def edit
+    super
   end
 
   # POST /notes
@@ -35,6 +39,7 @@ class NotesController < ApplicationController
         format.json { render json: @note.errors, status: :unprocessable_entity }
       end
     end
+    super
   end
 
   # PATCH/PUT /notes/1
@@ -49,6 +54,7 @@ class NotesController < ApplicationController
         format.json { render json: @note.errors, status: :unprocessable_entity }
       end
     end
+    super
   end
 
   # DELETE /notes/1
@@ -59,6 +65,7 @@ class NotesController < ApplicationController
       format.html { redirect_to notes_url, notice: 'Note was successfully destroyed.' }
       format.json { head :no_content }
     end
+    super
   end
 
   private
