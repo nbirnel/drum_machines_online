@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'colophon' => 'colophon#colophon'
+
   root 'welcome#index'
   get 'welcome/index'
 
