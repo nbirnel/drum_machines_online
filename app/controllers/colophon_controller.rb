@@ -1,5 +1,5 @@
 class ColophonController < ApplicationController
   def colophon
-    @title = "#{self.controller_name.capitalize} - #{app_title}"
+    @title = "#{self.controller_name.underscore.titleize} - #{app_title}"
   end
 end

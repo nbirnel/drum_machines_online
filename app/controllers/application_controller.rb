@@ -7,24 +7,24 @@ class ApplicationController < ActionController::Base
 
   def index
     # eg "Recipes - Bake Helper"
-    @title = "#{self.controller_name.capitalize} - #{app_title}"
+    @title = "#{self.controller_name.underscore.titleize} - #{app_title}"
   end
 
   def show
     # eg @recipe
-    item = eval "@#{self.controller_name.singularize}"
+    item = eval "@#{self.controller_name.underscore.titleize.singularize}"
     # eg "White Bread - Bake Helper"
     @title = "#{item.name} - #{app_title}"
   end
 
   def new
     # eg "New Recipe - Bake Helper"
-    @title = "New #{self.controller_name.singularize.capitalize} - #{app_title}"
+    @title = "New #{self.controller_name.underscore.titleize.singularize} - #{app_title}"
   end
 
   def edit
     # eg @recipe
-    item = eval "@#{self.controller_name.singularize}"
+    item = eval "@#{self.controller_name.underscore.titleize.singularize}"
     # eg "Edit White Bread - Bake Helper"
     @title = "Edit #{item.name} - #{app_title}"
   end
