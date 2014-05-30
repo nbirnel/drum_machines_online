@@ -1,0 +1,16 @@
+%p#notice= notice
+%p
+  %strong C3:
+  = @note.c3
+%p
+  %strong Asa yamaha:
+  = @note.asa_yamaha
+%p
+  %strong Key num:
+  = @note.key_num
+%p
+  %strong Freq:
+  = @note.freq
+= link_to 'Edit', edit_note_path(@note)
+|
+\#{link_to 'Back', notes_path}

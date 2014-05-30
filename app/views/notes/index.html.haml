@@ -1,0 +1,18 @@
+%h1 Listing notes
+%table
+  %thead
+    %tr
+      %th C3
+      %th Asa yamaha
+      %th Key num
+      %th Freq
+      %th{:colspan => "3"}
+  %tbody
+    - @notes.each do |note|
+      %tr
+        %td= note.c3
+        %td= note.asa_yamaha
+        %td= note.key_num
+        %td= note.freq
+        %td= link_to 'Show', note
+%br/
