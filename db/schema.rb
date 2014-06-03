@@ -11,12 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140529223645) do
+ActiveRecord::Schema.define(version: 20140603170715) do
 
   create_table "notes", force: true do |t|
     t.string   "c3"
     t.string   "asa_yamaha"
-    t.integer  "key_num"
+    t.integer  "name"
     t.float    "freq"
     t.datetime "created_at"
     t.datetime "updated_at"
