@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :models
+
+  resources :manufacturers
+
   get 'colophon' => 'colophon#colophon'
 
   root 'welcome#index'
