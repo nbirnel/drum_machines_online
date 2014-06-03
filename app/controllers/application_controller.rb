@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
 
   def show
     # eg @recipe
-    item = eval "@#{self.controller_name.underscore.titleize.singularize}"
+    item = eval "@#{self.controller_name.singularize}"
     # eg "White Bread - Bake Helper"
     @title = "#{item.name} - #{app_title}"
   end
