@@ -44,6 +44,8 @@ gem 'spring',        group: :development
 #customized:
 group :test, :development do
   gem 'rspec-rails'
+  #travis needs rake explicitly installed?
+  gem 'rake'
 end
 
 gem 'haml'
