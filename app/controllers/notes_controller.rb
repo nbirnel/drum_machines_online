@@ -39,7 +39,6 @@ class NotesController < ApplicationController
         format.json { render json: @note.errors, status: :unprocessable_entity }
       end
     end
-    super
   end
 
   # PATCH/PUT /notes/1
@@ -54,7 +53,6 @@ class NotesController < ApplicationController
         format.json { render json: @note.errors, status: :unprocessable_entity }
       end
     end
-    super
   end
 
   # DELETE /notes/1
@@ -65,7 +63,6 @@ class NotesController < ApplicationController
       format.html { redirect_to notes_url, notice: 'Note was successfully destroyed.' }
       format.json { head :no_content }
     end
-    super
   end
 
   private

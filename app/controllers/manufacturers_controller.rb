@@ -39,7 +39,6 @@ class ManufacturersController < ApplicationController
         format.json { render json: @manufacturer.errors, status: :unprocessable_entity }
       end
     end
-    super
   end
 
   # PATCH/PUT /manufacturers/1
@@ -54,7 +53,6 @@ class ManufacturersController < ApplicationController
         format.json { render json: @manufacturer.errors, status: :unprocessable_entity }
       end
     end
-    super
   end
 
   # DELETE /manufacturers/1
@@ -65,7 +63,6 @@ class ManufacturersController < ApplicationController
       format.html { redirect_to manufacturers_url, notice: 'Manufacturer was successfully destroyed.' }
       format.json { head :no_content }
     end
-    super
   end
 
   private

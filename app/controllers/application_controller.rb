@@ -24,7 +24,7 @@ class ApplicationController < ActionController::Base
 
   def edit
     # eg @recipe
-    item = eval "@#{self.controller_name.underscore.titleize.singularize}"
+    item = eval "@#{self.controller_name.singularize}"
     # eg "Edit White Bread - Bake Helper"
     @title = "Edit #{item.name} - #{app_title}"
   end

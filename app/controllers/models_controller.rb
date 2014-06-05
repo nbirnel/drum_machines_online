@@ -39,7 +39,6 @@ class ModelsController < ApplicationController
         format.json { render json: @model.errors, status: :unprocessable_entity }
       end
     end
-    super
   end
 
   # PATCH/PUT /models/1
@@ -54,7 +53,6 @@ class ModelsController < ApplicationController
         format.json { render json: @model.errors, status: :unprocessable_entity }
       end
     end
-    super
   end
 
   # DELETE /models/1
@@ -65,7 +63,6 @@ class ModelsController < ApplicationController
       format.html { redirect_to models_url, notice: 'Model was successfully destroyed.' }
       format.json { head :no_content }
     end
-    super
   end
 
   private
