@@ -5,7 +5,11 @@
   = @user.name
 %p
   %b Email:
-  = @user.email
+  = rendered_email(@user)
+
+%p
+  %b Show Email:
+  = @user.show_email
 
 = link_to 'Edit', edit_user_path(@user)
 \|
