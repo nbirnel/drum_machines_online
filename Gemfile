@@ -3,8 +3,6 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -46,6 +44,8 @@ group :test, :development do
   gem 'rspec-rails'
   #travis needs rake explicitly installed?
   gem 'rake'
+  # just for test /devel since we will use postgres for production
+  gem 'sqlite3'
 end
 
 # nicer html templating than erb
@@ -58,3 +58,7 @@ gem 'devise'
 # multiple environments w/ dependancies
 gem 'figaro'
 
+# postgres for deployment on heroku
+group :production do
+  gem 'pg'
+end
