@@ -48,10 +48,13 @@ group :test, :development do
   gem 'rake'
 end
 
-#nicer html templating than erb
+# nicer html templating than erb
 gem 'haml'
 gem 'haml-rails'
 
-#authentication
+# authentication
 gem 'devise'
+
+# multiple environments w/ dependancies
+gem 'figaro'
 
