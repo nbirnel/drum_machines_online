@@ -80,4 +80,18 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+  
+  # use mailtrap in Heroku production
+  ActionMailer::Base.delivery_method = :smtp
+  ActionMailer::Base.smtp_settings = {
+    :user_name => ENV['mailtrap_username'],
+    :password => ENV['mailtrap_password'],
+    :address => "mailtrap.io",
+    :domain => "mailtrap.io",
+    :port => 25,
+    :authentication => :plain
+  }
+  
+  #In production, :host should be set to the actual host of your application.
+  
 end

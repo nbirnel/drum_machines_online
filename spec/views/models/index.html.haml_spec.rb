@@ -9,7 +9,7 @@ describe "models/index" do
         :channel_reassignable => false,
         :MIDI_in => false,
         :MIDI_out => false,
-        :MIDI_through_boolean => "Midi Through Boolean",
+        :MIDI_through => "Midi Through",
         :USB => false
       ),
       stub_model(Model,
@@ -18,7 +18,7 @@ describe "models/index" do
         :channel_reassignable => false,
         :MIDI_in => false,
         :MIDI_out => false,
-        :MIDI_through_boolean => "Midi Through Boolean",
+        :MIDI_through => "Midi Through",
         :USB => false
       )
     ])
@@ -32,7 +32,7 @@ describe "models/index" do
     assert_select "tr>td", :text => false.to_s, :count => 2
     assert_select "tr>td", :text => false.to_s, :count => 2
     assert_select "tr>td", :text => false.to_s, :count => 2
-    assert_select "tr>td", :text => "Midi Through Boolean".to_s, :count => 2
+    assert_select "tr>td", :text => "Midi Through".to_s, :count => 2
     assert_select "tr>td", :text => false.to_s, :count => 2
   end
 end

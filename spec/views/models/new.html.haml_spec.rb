@@ -8,7 +8,7 @@ describe "models/new" do
       :channel_reassignable => false,
       :MIDI_in => false,
       :MIDI_out => false,
-      :MIDI_through_boolean => "MyString",
+      :MIDI_through => "MyString",
       :USB => false
     ).as_new_record)
   end
@@ -23,7 +23,7 @@ describe "models/new" do
       assert_select "input#model_channel_reassignable[name=?]", "model[channel_reassignable]"
       assert_select "input#model_MIDI_in[name=?]", "model[MIDI_in]"
       assert_select "input#model_MIDI_out[name=?]", "model[MIDI_out]"
-      assert_select "input#model_MIDI_through_boolean[name=?]", "model[MIDI_through_boolean]"
+      assert_select "input#model_MIDI_through[name=?]", "model[MIDI_through]"
       assert_select "input#model_USB[name=?]", "model[USB]"
     end
   end
