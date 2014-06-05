@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140605152652) do
+ActiveRecord::Schema.define(version: 20140605182537) do
 
   create_table "manufacturers", force: true do |t|
     t.string   "name"
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 20140605152652) do
     t.float    "freq"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "sound"
   end
 
   create_table "users", force: true do |t|
