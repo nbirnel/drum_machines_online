@@ -8,8 +8,20 @@
 development:
     noahs_api_key: 'foo'
     default_email_to: 'nbirnel@gmail.com'
-    mailtrap_username: "foo"
+    mailtrap_username: "nbirnel"
     mailtrap_password: "foo"
 
+test:
+    noahs_api_key: 'foo'
+    default_email_to: 'nbirnel@gmail.com'
+    mailtrap_username: "nbirnel"
+    mailtrap_password: "foo"
+
+staging:
+  noahs_api_key: 'foo'
+  default_email_to: 'nbirnel@gmail.com'
+
+production:
+    noahs_api_key: '#FIXME put a real api key here'
 
 
